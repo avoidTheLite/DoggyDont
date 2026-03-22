@@ -1,0 +1,27 @@
+# Dog Posture Detection Configuration
+
+# Posture classification threshold (overhead / steep downward camera)
+# Uses orientation-invariant "compactness" = minor_axis / major_axis
+# where major = longer bbox side (body length), minor = shorter side (cross-body).
+# The dog can face any direction — the ratio stays stable.
+#   Standing dog: elongated, low compactness  (e.g. 0.25–0.50)
+#   Squatting dog: legs splay, higher compactness (approaches 1.0)
+# compactness >= threshold  =>  SQUATTING
+# compactness <  threshold  =>  STANDING
+squat_threshold: 0.75
+
+# YOLO detection confidence threshold
+detection_confidence: 0.3
+
+# Alert cooldown in seconds — prevents rapid repeat alerts
+alert_cooldown_seconds: 3.0
+
+# Output settings
+output_dir: "output"
+output_video_filename: "annotated_output.avi"
+detection_log_filename: "detections.csv"
+
+# Viewer settings
+display_window: true
+window_width: 960
+window_height: 540
