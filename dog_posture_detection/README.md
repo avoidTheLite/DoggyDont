@@ -51,6 +51,7 @@ The YOLOv8n model weights (`yolov8n.pt`) are downloaded automatically on first r
 
 ```bash
 python detect.py path/to/video.mp4
+python detect.py /home/metal/DoggyDont/Doggydont_videos
 ```
 
 Options:
