@@ -1,0 +1,8 @@
+{
+  "name": "DoggyDont",
+  "install": "bash .cursor/bootstrap.sh",
+  "repositoryDependencies": [
+    "github.com/avoidTheLite/dotfiles",
+    "github.com/avoidTheLite/DKR"
+  ]
+}

@@ -70,3 +70,15 @@ Key tunable parameters:
 - `squat_threshold` — compactness cutoff (lower = more sensitive to squatting)
 - `detection_confidence` — YOLO confidence filter
 - `alert_cooldown_seconds` — minimum seconds between squat alerts
+
+<!-- >>> dotfiles claude-cloud >>> -->
+<!-- Managed by `dotfiles install` / `dotfiles install-cloud-agent`. Do not edit by hand. -->
+
+@AGENTS.md
+
+## Claude Code cloud specific instructions
+
+- A SessionStart hook (`.claude/hooks/cloud-bootstrap.sh`, cloud only) runs the shared `.cursor/bootstrap.sh`.
+- Claude cloud sessions reach only GitHub repos attached to the session: attach `avoidTheLite/dotfiles` and `avoidTheLite/DKR` alongside this repo. If the hook reports a failure, **stop and report** — do not skip setup.
+- Cloud sessions run as root with Node 20/21/22 preinstalled; the bootstrap installs Node 24 from nodejs.org (Trusted network access allows it).
+<!-- <<< dotfiles claude-cloud <<< -->
